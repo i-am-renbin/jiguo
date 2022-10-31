@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,373 @@
     <title>酷玩</title>
     <link rel="stylesheet" href="../css/play/play.css">
 </head>
+
 <body>
+    <iframe src="../public_/header.html" width="100%" height="76" frameborder="no" border="0" marginwidth="0"
+        marginheight="0" allowtransparency="0" scrolling="no" frameborder="0"></iframe>
     <!-- 头部 -->
-    <main id="app">
+    <main id="app" v-cloak>
         <div class="top">
             <div class="title">发现酷玩</div>
-        <!-- 切换栏 -->
-        <ul class="bar">
-            <li>最新</li>
-            <li>最热</li>
-            <li>分类</li>
-        </ul>
+            <!-- 切换栏 -->
+            <ul class="bar">
+                <li v-for="(item,index) in bars" :class="{'active':(item.value)}" @click="changeTab(item,index)">
+                    {{item.name}}</li>
+
+            </ul>
         </div>
         <!-- 内容区域 -->
         <div class="content">
-           <div class="content1"></div>
-           <div class="content2"></div>
-           <div class="content3"></div>
+            <div :class="{'content1':tabs[0].value}" v-show='tabs[0].value'>
+                <ul v-for="(item,index) in goods" v-show="index < x">
+                    <li v-for="(item1,index1) in item">
+
+                        <div class="pic"><img :src="item1.img" alt=""></div>
+                        <div class="name">{{item1.description}}</div>
+                        <p class="text">{{item1.text}}</p>
+                        <div class="goods">
+                            <div class="price">{{item1.price}}</div>
+                            <div class="number"><span @click="item1.like++">{{item1.like}}</span>
+                                <span>{{item1.words}}</span>
+                            </div>
+                        </div>
+                    </li>
+
+
+                </ul>
+                <!-- <ul v-for="(item,index) in goods" >
+                    <li v-for="(item1,index1) in item">
+                      
+                        <div class="pic"><img :src="item1.img" alt=""></div>
+                        <div class="name">{{item1.description}}</div>
+                        <p class="text">{{item1.text}}</p>
+                        <div class="goods">
+                            <div class="price">{{item1.price}}</div>
+                            <div class="number"><span>{{item1.like}}</span>
+                                <span>{{item1.words}}</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul> -->
+            </div>
+
+            <div class="content2 content1" v-show='tabs[1].value'>
+                <ul v-for="(item,index) in hotsGoods" v-show="index < x">
+                    <li v-for="(item1,index1) in item">
+
+                        <div class="pic"><img :src="item1.img" alt=""></div>
+                        <div class="name">{{item1.description}}</div>
+                        <p class="text">{{item1.text}}</p>
+                        <div class="goods">
+                            <div class="price">{{item1.price}}</div>
+                            <div class="number"><span @click="item1.like++">{{item1.like}}</span>
+                                <span>{{item1.words}}</span>
+                            </div>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="content3" v-show='tabs[2].value'>
+                <!-- 第一部分 -->
+                <div class="list1">
+                    <dl>
+                        <dt>生活</dt>
+                        <dd>
+                            <img src="../img/cat_1.png">
+                            <p class="info">空气净化器（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_2.png">
+                            <p class="info">吸尘器（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_3.png">
+                            <p class="info">扫地机器人（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_4.png">
+                            <p class="info">电风扇（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_5.png">
+                            <p class="info">净水壶（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_6.png">
+                            <p class="info">电饭煲（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_7.png">
+                            <p class="info">空气净化器（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_8.png">
+                            <p class="info">空气净化器（21）</p>
+                        </dd>
+                    </dl>
+                    <ul class="goodslist">
+                        <li>电视（21）</li>
+                        <li>空调（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+                        <li>电视（21）</li>
+
+
+                    </ul>
+                </div>
+                <div class="list1">
+                    <dl>
+                        <dt>个人护理</dt>
+                        <dd>
+                            <img src="../img/cat_9.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_4.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_4.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_3.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_1.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_1.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <!-- -->
+                    </dl>
+                    <ul class="goodslist">
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        
+                    </ul>
+                </div>
+                <div class="list1">
+                    <dl>
+                        <dt>健康</dt>
+                        <dd>
+                            <img src="../img/cat_9.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_4.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_4.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_3.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_1.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_1.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <!-- -->
+                    </dl>
+                    <ul class="goodslist">
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        
+                    </ul>
+                </div>
+                <div class="list1">
+                    <dl>
+                        <dt>智能穿戴</dt>
+                        <dd>
+                            <img src="../img/cat_9.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_4.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_4.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_3.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_1.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_1.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        <!-- -->
+                    </dl>
+                    <ul class="goodslist">
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        
+                    </ul>
+                </div>
+                <div class="list1">
+                    <dl>
+                        <dt>出行</dt>
+                        <dd>
+                            <img src="../img/cat_1.png" alt="">
+                            <p>手环（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_3.png" alt="">
+                            <p>运动手表（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_5.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        
+                        <!-- -->
+                    </dl>
+                    <ul class="goodslist">
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        
+                    </ul>
+                </div>
+                <div class="list1">
+                    <dl>
+                        <dt>户外运动</dt>
+                        <dd>
+                            <img src="../img/cat_1.png" alt="">
+                            <p>手环（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_3.png" alt="">
+                            <p>运动手表（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_5.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        
+                        <!-- -->
+                    </dl>
+                    <ul class="goodslist">
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        
+                    </ul>
+                </div>
+                <div class="list1">
+                    <dl>
+                        <dt>摄影</dt>
+                        <dd>
+                            <img src="../img/cat_1.png" alt="">
+                            <p>手环（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_3.png" alt="">
+                            <p>运动手表（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_5.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        
+                        <!-- -->
+                    </dl>
+                    <ul class="goodslist">
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        <li> 冲牙器（21）</li>
+                        
+                    </ul>
+                </div>
+                <div class="list1">
+                    <dl>
+                        <dt>手机</dt>
+                        <dd>
+                            <img src="../img/cat_1.png" alt="">
+                            <p>手环（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_3.png" alt="">
+                            <p>运动手表（21）</p>
+                        </dd>
+                        <dd>
+                            <img src="../img/cat_5.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </dd>
+                        
+                        <!-- -->
+                    </dl>
+                    <ul class="goodslist">
+                        <li> 苹果（21）</li>
+                        <li> 小米</li>
+                        <li> 华为（21）</li>
+                        <li> oppo（21）</li>
+                        <li> vivo（21）</li>
+                        
+                    </ul>
+                </div>
+            </div>
         </div>
+        <div class="nextpage" @click="change_" v-if="x==2">
+            <svg t="1667214274412" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="4062" width="18" height="18">
+                <path
+                    d="M512.726547 675.318646c-8.063653 0-15.790638-3.245927-21.435195-9.006118L231.175103 400.906809c-11.603269-11.837606-11.410887-30.840402 0.427742-42.442648 11.837606-11.601222 30.841426-11.410887 42.442648 0.427742l238.681054 243.534596L751.407602 358.891903c11.601222-11.839653 30.602995-12.033058 42.442648-0.427742 11.839653 11.603269 12.031011 30.605042 0.427742 42.442648L534.161742 666.312528C528.517185 672.072719 520.791224 675.318646 512.726547 675.318646z"
+                    p-id="4063" fill="#d81e06"></path>
+            </svg>
+            点击加载更多
+        </div>
+
     </main>
+    <!-- <iframe src="../public_/footer.html" frameborder="0"></iframe> -->
+    <iframe src="../public_/footer.html" width="100%" height="380" frameborder="no" border="0" marginwidth="0"
+        marginheight="0" allowtransparency="0" scrolling="no" frameborder="0"></iframe>
 </body>
+
 </html>
+<script src="../js/vue.js"></script>
+<script src="../js/axios.min.js"></script>
+<script src="../js/play.js"></script>
