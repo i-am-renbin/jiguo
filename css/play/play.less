@@ -4,16 +4,20 @@
     list-style: none;
     text-decoration: none;
 }
-
+iframe{
+    display: block;
+}
 main {
     width: 100%;
-    height: 500px;
+    // height: 480px;
     margin: 0 auto;
 
+    /* 顶部 */
     .top {
         width: 80%;
-        height: 100%;
+        height: 180px;
         margin: 0 auto;
+        // background-color: aquamarine;
 
         .title {
             width: 100%;
@@ -24,7 +28,7 @@ main {
             text-align: center;
         }
 
-        >.bar {
+        .bar {
             width: 500px;
             margin: 0 auto;
             display: flex;
@@ -48,14 +52,103 @@ main {
 
         }
     }
-    .content{
+  /*   // 内容区域 */
+    .content {
         width: 100%;
-        height: 300px;
-        background-color: aquamarine;
-        .content1{
-            width: 80%;
+        // height: 300px;
+        // background-color: #f7f7f7;
+        >.content1 {
+            width: 70%;
             height: 100%;
+           
             margin: 0 auto;
+            >ul{
+                width: 100%;
+                height: 500px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content:space-between;
+                // justify-items: flex-start;
+                // align-items:flex-start;
+                align-content: flex-start;
+                >li{
+                    width: 23%;
+                    height: 233px;
+                    // margin-right: 2%;
+                    box-sizing: border-box;
+                    // background-color: aquamarine;
+                    border-radius: 5px;
+                    margin-bottom: 17px;
+                    /* 图片 */
+                    .pic{
+                        width: 100%;
+                        height: 130px;
+                        >img{
+                                width: 100%;
+                                height: 130px;
+                        }
+                    }
+                    .name{
+                        font-size: 14px;
+                        color: #333;
+                        height: 20px;
+                        padding-left: 10px;
+                    }
+                    .text{
+                        font-size: 12px;
+                        color: #a3a3a3;
+                        // height: 15px;
+                        padding-left: 10px;
+                        // margin-bottom: 15px;
+                    }
+                    .goods{
+                        width: 100%;
+                        box-sizing: border-box;
+                        padding: 0 10px;
+                        line-height: 40px;
+                        height: 40px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        >div{
+                            width: 30%;
+                            color: #fe5343;
+                            // background-color: green;
+                            display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                            span{
+                                text-indent: 17px;
+                                font-size: 14px;
+                                box-sizing: border-box;
+                                // padding-top: 10px;
+                                flex: 1;
+                                &:nth-of-type(1){
+                                    background: url(../../img/喜爱.png) no-repeat left center;
+                                    &:hover{
+                                        background: url(../../img/aixin.png) no-repeat left center;
+                                    }
+                                }
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                                &:nth-of-type(2){
+                                    background: url(../../img/reply.png) no-repeat left center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nextpage{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        color: #d81e06;
+        &:hover{
+            cursor: pointer;
         }
     }
 }
