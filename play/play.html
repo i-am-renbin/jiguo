@@ -7,12 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>酷玩</title>
     <link rel="stylesheet" href="../css/play/play.css">
+    <link rel="stylesheet" href="../css/public_/header.css">
 </head>
 
 <body>
-    <iframe src="../public_/header.html" width="100%" height="76" frameborder="no" border="0" marginwidth="0"
-        marginheight="0" allowtransparency="0" scrolling="no" frameborder="0"></iframe>
-    <!-- 头部 -->
+     <!-- 头部 -->
+     <div class="header">
+        <div>
+            <div><a href="#"><img src="../img/logonew.png" alt=""></a></div>
+            <div>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../play/play.html">酷玩</a></li>
+                    <li><a href="../guid/guid.html">导航</a></li>
+                    <li><a href="../use/use.html">试用</a></li>
+                    <li><a href="../report/report.html">报告</a></li>
+                </ul>
+            </div>
+            <div>
+                <div><a href="#"><img src="../img/search.png" alt=""></a></div>
+                <!-- 当登录时a标签隐藏,显示用户名 -->
+                <div><a href="../regist.html">注册</a><span class="username"></span></div>
+            </div>
+        </div>
+    </div>
     <main id="app" v-cloak>
         <div class="top">
             <div class="title">发现酷玩</div>
@@ -42,20 +60,6 @@
 
 
                 </ul>
-                <!-- <ul v-for="(item,index) in goods" >
-                    <li v-for="(item1,index1) in item">
-                      
-                        <div class="pic"><img :src="item1.img" alt=""></div>
-                        <div class="name">{{item1.description}}</div>
-                        <p class="text">{{item1.text}}</p>
-                        <div class="goods">
-                            <div class="price">{{item1.price}}</div>
-                            <div class="number"><span>{{item1.like}}</span>
-                                <span>{{item1.words}}</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul> -->
             </div>
 
             <div class="content2 content1" v-show='tabs[1].value'>
@@ -161,7 +165,7 @@
                             <img src="../img/cat_1.png" alt="">
                             <p>电动牙刷（21）</p>
                         </dd>
-                        <!-- -->
+
                     </dl>
                     <ul class="goodslist">
                         <li> 冲牙器（21）</li>
