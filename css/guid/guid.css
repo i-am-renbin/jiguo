@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+/* 导购清单 */
+.guidmenu {
+  width: 70%;
+  margin: 0 auto;
+}
+.guidmenu > div:nth-of-type(1) {
+  width: 100%;
+}
+.guidmenu > div:nth-of-type(1) > h1 {
+  color: #333;
+  text-align: center;
+  padding: 34px 0 30px;
+  font-size: 40px;
+  font-weight: 500;
+}
+.guidmenu > div:nth-of-type(2) {
+  width: 100%;
+  text-align: center;
+  line-height: 1.7;
+}
+.guidmenu > div:nth-of-type(2) > a {
+  display: inline-block;
+  padding-bottom: 12px;
+  width: 165px;
+  font-size: 18px;
+  color: #a3a3a3;
+  border-bottom: 4px white solid;
+  padding-bottom: 8px;
+}
+.guidmenu > div:nth-of-type(2) .ac {
+  color: #fe5431;
+  border-bottom: 4px #fe5431 solid;
+}
+/* 清单内容 */
+.qdnr {
+  width: 100%;
+  background-color: #f7f7f7;
+  margin-bottom: 30px;
+  padding-top: 25px;
+}
+.qdnr > div:nth-of-type(1) {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  flex-wrap: wrap;
+}
+.qdnr > div:nth-of-type(1) > div {
+  width: 22%;
+  height: 230px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e9e9;
+  border-radius: 6px;
+  box-sizing: border-box;
+  position: relative;
+}
+.qdnr > div:nth-of-type(1) > div > img {
+  width: 205px;
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+}
+@keyframes fr {
+  100% {
+    opacity: 0.8;
+  }
+}
+.qdnr > div:nth-of-type(1) > div:hover .re {
+  animation: fr 0.8s ease infinite;
+}
+.qdnr > div:nth-of-type(1) > div > a > img {
+  width: 100%;
+}
+.qdnr > div:nth-of-type(1) > div > div {
+  font-size: 14px;
+  height: 45px;
+}
+.qdnr > div:nth-of-type(1) > div > div > p:nth-of-type(2) {
+  font-size: 12px;
+  color: #a3a3a3;
+  width: 100%;
+  height: 48px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.qdnr > div:nth-of-type(1) > div > div > p:nth-of-type(2) > span:nth-of-type(1) {
+  line-height: 48px;
+}
+.qdnr > div:nth-of-type(1) > div > div > p:nth-of-type(2) > span:nth-of-type(2),
+.qdnr > div:nth-of-type(1) > div > div > p:nth-of-type(2) > span:nth-of-type(3) {
+  display: block;
+  width: 25px;
+  height: 25px;
+  float: right;
+  text-align: right;
+  line-height: 25px;
+  margin-top: 10px;
+}
+.qdnr > div:nth-of-type(1) > div > div > p:nth-of-type(2) > span:nth-of-type(2) {
+  background: url(../../img/reply.png) no-repeat 4px 6px;
+}
+.qdnr > div:nth-of-type(1) > div > div > p:nth-of-type(2) > span:nth-of-type(3) {
+  background: url(../../img/xin.png) no-repeat 4px 6px;
+}
+.qdnr > div:nth-of-type(2) {
+  text-align: center;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  display: block;
+  cursor: pointer;
+}
+.qdnr > div:nth-of-type(2) > a {
+  padding-left: 24px;
+  color: #fe5341;
+  background: url(../../img/more.png) no-repeat left center;
+}
