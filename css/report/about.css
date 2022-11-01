@@ -4,3 +4,62 @@
   list-style: none;
   text-decoration: none;
 }
+.report-top h1 {
+  text-align: center;
+  padding: 34px 0 30px;
+  font-size: 40px;
+}
+.report-top .report-nav {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 0;
+}
+.report-top .report-nav a {
+  display: inline-block;
+  padding-bottom: 12px;
+  width: 165px;
+  font-size: 18px;
+}
+.report-top .report-nav a .on {
+  border-bottom: 4px #fe5431 solid;
+  padding-bottom: 8px;
+}
+.report-top .report-nav a .pad25 {
+  padding-top: 25px;
+}
+.play-nav a .listR .title {
+  position: relative;
+  font-size: 18px;
+  height: 25px;
+  line-height: 25px;
+  padding-left: 30px;
+}
+.play-nav a .listR .title:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 6px;
+  height: 25px;
+  left: 0;
+  top: 0;
+}
+.play-nav a .listR .imgBox {
+  margin-top: 20px;
+}
+.play-nav a .listR .info {
+  margin: 10px 0 20px;
+}
+.play-nav a .listR .info h5 {
+  font-size: 16px;
+  padding: 5px 0;
+}
+.play-nav a .listR .info .text {
+  font-size: 14px;
+}
+.play-nav a .listR .guanzhu {
+  padding-top: 40px;
+}
+.play-nav a .listR figure {
+  padding: 0;
+  margin: 0;
+}

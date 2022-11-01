@@ -38,6 +38,9 @@
 .regForm p {
   margin-top: 27px;
 }
+.regForm #psw {
+  width: 100%;
+}
 .regForm p:nth-child(2),
 .regForm p:nth-child(3) {
   position: relative;
