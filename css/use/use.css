@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+main {
+  width: 100%;
+  height: 700px;
+  /* 全部 申请 切换栏 */
+  /* 内容模块 */
+  /* 页面最下方 没有更多啦~ */
+}
+main .top {
+  width: 80%;
+  height: 180px;
+  margin: 0 auto;
+  /* 试用切换栏 */
+}
+main .top .title {
+  width: 100%;
+  height: 130px;
+  font-size: 40px;
+  color: #333;
+  line-height: 130px;
+  text-align: center;
+}
+main .top .bar {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 40px;
+}
+main .top .bar > li {
+  flex: 1;
+  text-align: center;
+  line-height: 35px;
+  color: #a3a3a3;
+  font-size: 18px;
+  height: 40px;
+}
+main .top .bar .active {
+  color: #fe5431;
+  border-bottom: 3px solid #fe5431;
+}
+main .nav {
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+}
+main .nav .navs {
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 40px;
+}
+main .nav .navs > li {
+  flex: 1;
+  text-align: center;
+  line-height: 35px;
+  color: #a3a3a3;
+  font-size: 18px;
+  height: 40px;
+}
+main .nav .navs .active {
+  color: #474747;
+}
+main .content {
+  width: 100%;
+  margin: 0 auto ;
+  padding-top: 20px;
+  background-color: #f7f7f7;
+}
+main .content .content1 {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+main .content .content1 li {
+  width: 23%;
+  height: 285px;
+  margin-right: 1%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+main .content .content1 li .top-tip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 12px;
+}
+main .content .content1 li .shoufa {
+  background-color: #fe5341;
+  width: 70px;
+  color: #fff;
+}
+main .content .content1 li img {
+  width: 100%;
+  height: 150px;
+}
+main .content .content1 li .hot-con {
+  text-align: center;
+  padding: 0 10px;
+}
+main .content .content1 li .hot-con .name {
+  font-size: 16px;
+  height: 40px;
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+main .content .content1 li .hot-con .tabs {
+  width: 50%;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+main .content .content1 li .hot-con .tabs span {
+  width: 40%;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #fe5341;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+main .content .content1 li .hot-con .tabs .green {
+  color: #80c269;
+  border: 1px solid #80c269;
+}
+main .content .content1 li .hot-con .sq {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #333;
+}
+main .content .content1 li .hot-con .sq span {
+  color: #fe5341;
+}
+main .content .content1 li .hot-con .current {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+}
+main .content .content1 li .hot-con .red {
+  color: #fe5341;
+}
+main .content .content1 li .hot-con .green {
+  color: #80c269;
+}
+main > p {
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  color: #a3a3a3;
+  background-color: #f7f7f7;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
