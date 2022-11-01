@@ -38,7 +38,7 @@
 .regForm p {
   margin-top: 27px;
 }
-.regForm #psw {
+.regForm #password {
   width: 100%;
 }
 .regForm p:nth-child(2),
@@ -83,6 +83,18 @@
 }
 .regForm input:required:valid {
   border: 1px #eee solid;
+}
+.regForm .right {
+  margin-left: 4px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.regForm .rember {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
 }
 .regForm button {
   border: medium none;

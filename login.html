@@ -39,9 +39,10 @@
                 "登录极果"
             </h2>
             <form class="regForm" name="my_fl" action method="post" onsubmit="return check(this);">
-                <p><input type="text" placeholder="请输入用户名" required="required">
+                <p><input type="text" placeholder="请输入用户名" required="required" id="username">
                 </p>
-                <p><input type="text" placeholder="请输入密码" required="required" id="psw"></p>
+                <p><input type="text" placeholder="请输入密码" required="required" id="password"></p>
+                <p class="right"> <input type="checkbox" class="rember">记住密码</p>
                 <p>
                     <button id="submit">登录</button>
                 </p>
@@ -127,3 +128,5 @@ CEO邮箱：CEO@jiguo.com -->
 </body>
 
 </html>
+<script src="./js/myCookie.js"></script>
+<script src="./js/login.js"></script>

@@ -20,21 +20,107 @@
   width: 165px;
   font-size: 18px;
 }
-.report-top .report-nav a .on {
+.report-top .report-nav .on {
   border-bottom: 4px #fe5431 solid;
   padding-bottom: 8px;
+  color: #fe5431;
 }
-.report-top .report-nav a .pad25 {
+.report-box {
+  width: 100%;
   padding-top: 25px;
+  background: #f7f7f7;
 }
-.play-nav a .listR .title {
+.report-box .wrap {
+  width: 1000px;
+  text-align: left;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.report-box .listInfo {
+  width: 700px;
+}
+.report-box .listInfo li {
+  border-radius: 6px;
+  border: 1px solid #e6e9e9;
+  margin-bottom: 13px;
+  position: relative;
+  overflow: hidden;
+}
+.report-box .listInfo li a {
+  display: block;
+}
+.report-box .listInfo li .info {
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 22px;
+}
+.report-box .listInfo li .title {
+  color: #474747;
+  font-size: 18px;
+  padding: 9px 0 12px;
+  font-weight: normal;
+}
+.report-box .listInfo li img {
+  border-radius: 6px;
+}
+.report-box .listInfo li .btm {
+  font-size: 13px;
+  padding: 16px 0 11px;
+}
+.report-box .listInfo li .btm .icon {
+  color: #a3a3a3;
+}
+.report-box .listInfo li .btm .icon span {
+  display: inline-block;
+  padding-left: 14px;
+  margin-left: 3px;
+}
+.report-box .listInfo li .btm .icon .zan {
+  background: url(../../img/zan.png) no-repeat left 4px;
+}
+.report-box .listInfo li .btm .icon .look {
+  background: url(../../img/reply.png) no-repeat left 4px;
+}
+.report-box .listInfo .click-look {
+  color: #a3a3a3;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+}
+.report-box .listInfo .userInfo span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.report-box .listInfo .userInfo .avt {
+  background: url(../../img/aixin.png) no-repeat;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.report-box .listInfo .userInfo .name {
+  color: #fe695a;
+}
+.report-box .listInfo .userInfo .time {
+  color: #a3a3a3;
+}
+.report-box .listR {
+  width: 270px;
+}
+.report-box .listR .title {
   position: relative;
   font-size: 18px;
   height: 25px;
   line-height: 25px;
   padding-left: 30px;
 }
-.play-nav a .listR .title:after {
+.report-box .listR .title:after {
   position: absolute;
   content: "";
   display: block;
@@ -42,24 +128,32 @@
   height: 25px;
   left: 0;
   top: 0;
+  background: #fe5341;
 }
-.play-nav a .listR .imgBox {
+.report-box .listR .imgBox {
   margin-top: 20px;
 }
-.play-nav a .listR .info {
+.report-box .listR .info {
   margin: 10px 0 20px;
 }
-.play-nav a .listR .info h5 {
+.report-box .listR .info h5 {
   font-size: 16px;
   padding: 5px 0;
+  color: #474747;
 }
-.play-nav a .listR .info .text {
+.report-box .listR .info .text {
   font-size: 14px;
+  color: #a3a3a3;
 }
-.play-nav a .listR .guanzhu {
+.report-box .listR .guanzhu {
   padding-top: 40px;
 }
-.play-nav a .listR figure {
+.bread a {
+  color: #a3a3a3;
+  height: 50px;
+  line-height: 50px;
+}
+figure {
   padding: 0;
   margin: 0;
 }
