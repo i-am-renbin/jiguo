@@ -15,7 +15,7 @@
     <!-- 头部 -->
     <div class="header">
         <div>
-            <div><a href="#"><img src="../img/logonew.png" alt=""></a></div>
+            <div><a href="#"><img src="./img/logonew.png" alt=""></a></div>
             <div>
                 <ul>
                     <li><a href="#">首页</a></li>
@@ -26,7 +26,7 @@
                 </ul>
             </div>
             <div>
-                <div><a href="#"><img src="../img/search.png" alt=""></a></div>
+                <div><a href="#"><img src="./img/search.png" alt=""></a></div>
                 <!-- 当登录时a标签隐藏,显示用户名 -->
                 <div><a href="../regist.html">注册</a><span class="username"></span></div>
             </div>
@@ -38,7 +38,7 @@
             <h2 class="title">
                 "登录极果"
             </h2>
-            <form class="regForm" name="my_fl" action method="post" onsubmit="return check(this);">
+            <form class="regForm" name="my_fl" action method="get" onsubmit="return check(this);">
                 <p><input type="text" placeholder="请输入用户名" required="required" id="username">
                 </p>
                 <p><input type="text" placeholder="请输入密码" required="required" id="password"></p>
@@ -128,5 +128,5 @@ CEO邮箱：CEO@jiguo.com -->
 </body>
 
 </html>
-<script src="./js/myCookie.js"></script>
-<script src="./js/login.js"></script>
+<script src="js/myCookie.js"></script>
+<script src="js/login.js"></script>

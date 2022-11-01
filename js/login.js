@@ -1,60 +1,42 @@
-let username = document.getElementById('.username');
-let password = document.getElementById('.password');
-let rember = document.getElementById('.rember');
 if (getCookie('rember')) {
-    document.getElementById('.username').value = getCookie('username')
-    document.getElementById('.password').value = getCookie('password')
-    document.getElementById('.rember').checked = getCookie('rember')
+    document.getElementById('username').value = getCookie('username');
+    document.getElementById('password').value = getCookie('password');
+    document.getElementById('rember').checked = getCookie('rember');
 }
-
-// 用户名检测
-username.onblur = function () {
-    let reg = /^[a-zA-Z0-9\u4E00-\u9FA5]{4,12}$/;
-
-    if (reg.test(username.value)) {
-        this.nextElementSibling.className = 'ok'
-        this.nextElementSibling.firstChild.nodeValue = '输入正确'
+function login() {
+    var user_ = document.getElementById('username').value;
+    var psd_ = document.getElementById('password').value;
+    var rember_ = document.getElementById('rember').checked;
+    if (rember_) {
+        setCookie('username', user_);
+        setCookie('password', psd_);
+        setCookie('rember', rember_);
     } else {
-        this.nextElementSibling.firstChild.nodeValue = '请正确输入'
-
-        this.nextElementSibling.className = 'error'
-    }
-
-}
-
-// 密码检测
-password.onblur = function () {
-    let reg = /^\w{6,12}$/;
-
-    if (reg.test(password.value)) {
-        this.nextElementSibling.className = 'ok'
-        this.nextElementSibling.firstChild.nodeValue = '输入正确'
-    } else {
-        this.nextElementSibling.firstChild.nodeValue = '请正确输入'
-
-        this.nextElementSibling.className = 'error'
+        removeCookie('username');
+        removeCookie('password');
+        removeCookie('rember');
     }
 }
 
-
-let loginbut = document.querySelector('.loginput');
-loginbut.onclick = () => {
+let submit = document.getElementById('submit');
+submit.onclick = () => {
     let reg1 = /^[a-zA-Z0-9\u4E00-\u9FA5]{4,12}$/;
     let reg2 = /^\w{6,12}$/;
-    let username = document.querySelector('.username');
-    let password = document.querySelector('.password');
-    let rember = document.querySelector('.rember');
+    let username = document.getElementById('username');
+    let password = document.getElementById('password');
+    let rember = document.getElementById('rember');
     if (reg1.test(username.value) && reg2.test(password.value)) {
         if (rember.checked) {
             setCookie('username', username.value, 1)
             setCookie('password', password.value, 1)
             setCookie('rember', rember.checked, 1)
             alert('登录成功')
-            window.location.href = './index.html'
+            login();
+            window.location.href = 'index.html'
 
         } else {
             alert('登录成功')
-            window.location.href = '../index.html'
+            window.location.href = 'index.html'
         }
     }
 }
