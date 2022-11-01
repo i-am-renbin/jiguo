@@ -6,10 +6,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>导购</title>
+
+    <link rel="stylesheet" href="./css/public_/header.css">
+    <link rel="stylesheet" href="./css/guid/guid.css">
 </head>
 
 <body>
-    导购
+    <!-- 头部 -->
+    <div class="header">
+        <div>
+            <div><a href="#"><img src="./img/logonew.png" alt=""></a></div>
+            <div>
+                <ul>
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./play/play.html">酷玩</a></li>
+                    <li><a href="./guid.html">导购</a></li>
+                    <li><a href="./use/use.html">试用</a></li>
+                    <li><a href="./report/report.html">报告</a></li>
+                </ul>
+            </div>
+            <div>
+                <div><a href="#"><img src="./img/search.png" alt=""></a></div>
+                <!-- 当登录时a标签隐藏,显示用户名 -->
+                <div><a href="./regist.html">注册</a><span class="username"></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <!-- 导购清单 -->
+        <div class="guidmenu">
+            <div>
+                <h1>导购清单</h1>
+            </div>
+            <div>
+                <a href="#" v-for="(it,inds) in arr" :class="{'ac':it.bol}" @click="zuibtn(inds)">{{it.zui}}</a>
+                <!-- <a href="#">最热</a> -->
+            </div>
+
+
+        </div>
+
+        <!-- 清单内容 -->
+        <div class="qdnr">
+            <div id="guidcontent">
+                <div v-for="(item,index) in glist" v-show="index<num">
+                    <img src="./img/listbg.jpg" alt="">
+                    <a href="#"><img :src="item.img" class="re"></a>
+                    <div>
+                        <p>{{item.text}}</p>
+                        <p><span></span><span>{{item.words}}</span><span>{{item.like}}</span></p>
+                    </div>
+                </div>
+
+            </div>
+            <div><a @click="dianji" v-show="!(num==glist.length)">点击加载页面</a></div>
+        </div>
+
+    </div>
+    <!-- 底部 -->
+    <iframe src="./public_/footer.html" frameborder="0" scrolling="no" style="width: 100%; height:380px;"></iframe>
 </body>
 
 </html>
+<script src="./js/jquery-3.5.1.min.js"></script>
+<script src="./js/vue.js"></script>
+<script src="./js/guid.js"></script>
