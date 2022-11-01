@@ -28,7 +28,7 @@
             <div>
                 <div><a href="#"><img src="./img/search.png" alt=""></a></div>
                 <!-- 当登录时a标签隐藏,显示用户名 -->
-                <div><a href="./regist.html">注册</a><span class="username"></span></div>
+                <div id="app"><a href="./regist.html" v-show="bol">注册</a><span class="username">{{user.username}}</span></div>
             </div>
         </div>
     </div>
@@ -317,6 +317,7 @@
 </body>
 
 </html>
+<script src="./js/Mycookie(1).js"></script>
 <script src="./js/swiper-bundle.min.js"></script>
 <script src="./js/vue.js"></script>
 <script src="./js/index.js"></script>

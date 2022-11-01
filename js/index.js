@@ -8,7 +8,8 @@ let vue = new Vue({
         day: 13,
         hour: 5,
         min: 37,
-        timer: ''
+        timer: '',
+       
     },
     methods: {
         apply() {
@@ -48,3 +49,28 @@ let vue = new Vue({
         this.ftime_();
     }
 });
+
+let vv=new Vue({
+    el:'#app',
+    data:{
+        user:{
+            username:'',
+            password:'',
+            rember:false,
+            phone:'',
+        },
+        bol:true
+    },mounted() {
+        this.updata();
+    },
+    methods:{
+        updata(){
+            this.user.username=getCookie('username');
+            if(!getCookie('username')){
+                this.bol=true;
+            }else{
+                this.bol=false;
+            }
+        }
+    }
+})

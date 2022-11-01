@@ -15,20 +15,20 @@
     <!-- 头部 -->
     <div class="header">
         <div>
-            <div><a href="#"><img src="./img/logonew.png" alt=""></a></div>
+            <div><a href="#"><img src="./img/logonew.png" alt="" ></a></div>
             <div>
                 <ul>
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">酷玩</a></li>
-                    <li><a href="#">导航</a></li>
-                    <li><a href="#">试用</a></li>
-                    <li><a href="#">报告</a></li>
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./play/play.html">酷玩</a></li>
+                    <li><a href="./guid.html">导购</a></li>
+                    <li><a href="./use/use.html">试用</a></li>
+                    <li><a href="./report/report.html">报告</a></li>
                 </ul>
             </div>
             <div>
                 <div><a href="#"><img src="./img/search.png" alt=""></a></div>
                 <!-- 当登录时a标签隐藏,显示用户名 -->
-                <div><a href="../regist.html">注册</a><span class="username"></span></div>
+                <div><a href="./regist.html">注册</a><span class="username"></span></div>
             </div>
         </div>
     </div>
@@ -38,15 +38,15 @@
             <h2 class="title">
                 "登录极果"
             </h2>
-            <form class="regForm" name="my_fl" action method="get" onsubmit="return check(this);">
-                <p><input type="text" placeholder="请输入用户名" required="required" id="username">
+            <div id="app" class="regForm" name="my_fl"  method="get" >
+                <p><input type="text" placeholder="请输入用户名" required="required" id="username" v-model="user.username">
                 </p>
-                <p><input type="text" placeholder="请输入密码" required="required" id="password"></p>
-                <p class="right"> <input type="checkbox" class="rember">记住密码</p>
+                <p><input type="password" placeholder="请输入密码" required="required" id="password" v-model="user.password"></p>
+                <p class="right"> <input type="checkbox" class="rember" v-model="user.rember">记住密码</p>
                 <p>
-                    <button id="submit">登录</button>
+                    <button id="submit" @click="login" >登录</button>
                 </p>
-            </form>
+            </div>
         </div>
 
     </section>
@@ -128,5 +128,46 @@ CEO邮箱：CEO@jiguo.com -->
 </body>
 
 </html>
-<script src="js/myCookie.js"></script>
-<script src="js/login.js"></script>
+<script src="./js/vue.js"></script>
+<script src="./js/Mycookie(1).js"></script>
+<script>
+const vv=new Vue({
+    el:'#app',
+    data:{
+        user:{
+            username:'',
+            password:'',
+            rember:false,
+            phone:'',
+        }
+    },
+    mounted() {
+        this.updatas();
+    },
+    methods:{
+        login(){
+            
+            if(this.user.username==getCookie('username') && this.user.password==getCookie('password')){
+                if(!this.user.rember){
+                clearCookie();
+            }
+               
+                window.location.href='./index.html'
+            }else{
+                alert('密码输入有误')
+                window.location.href='./login.html'
+            }
+            
+            // setCookie('username',this.user.username,1)
+            // setCookie('password',this.user.password,1)
+            // setCookie('phone',this.user.phone,1)
+            // setCookie('rember',this.user.rember,1)
+        },
+        updatas(){
+            this.user.username=getCookie('username');
+            this.user.rember=getCookie('rember');
+        }
+    },
+   
+});
+</script>
