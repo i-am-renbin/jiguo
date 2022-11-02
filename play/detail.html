@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/public_/header.css">
+    <link rel="stylesheet" href="../css/play/detail.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div>
+            <div><a href="#"><img src="../img/logonew.png" alt=""></a></div>
+            <div>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../play/play.html">酷玩</a></li>
+                    <li><a href="../guid.html">导购</a></li>
+                    <li><a href="../use/use.html">试用</a></li>
+                    <li><a href="../report/report.html">报告</a></li>
+                </ul>
+            </div>
+            <div>
+                <div><a href="#"><img src="../img/search.png" alt=""></a></div>
+                <!-- 当登录时a标签隐藏,显示用户名 -->
+                <div><a href="../regist.html">注册</a><span class="username"></span></div>
+            </div>
+        </div>
+    </div>
+    <!-- 焦点图 -->
+    <div class="focus">
+        <div>
+            <div id="focuscontent">
+                <h2>幻响小贝HiFi2.1音箱</h2>
+                <p><span> {{people}}人申请</span><span>￥599</span><span>{{stage}}台</span></p>
+                <p>申请时间剩余：{{day}}天{{hour}}小时{{min}}分钟</p>
+                <p :class="{ac:bol}"><a href="#" @click="apply">{{mom}}</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- 试用流程 -->
+    <div class="useLc">
+        <div>
+            <ul>
+                <li>试用<br>流程 </li>
+                <li>开发申请</li>
+                <li>名单公布</li>
+                <li>产品使用</li>
+                <li>提交反馈</li>
+                <li>活动结束</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 内容 区域  -->
+    <div class="contents">
+        <!-- 内容左边 -->
+        <div class="cleft">
+            <h3>产品介绍</h3>
+            <p>多重功能集成的便携控制中心：半果控制中心。</p>
+            <p>半果控制中心是一台功能高度集成的便携控制设备，包含WiFi收发模块、蓝牙4.1模块、独立声卡系统、音乐控制拨盘、麦克风语音接收、3.5mm耳机接口、高速数据传输、QC2.0快速充电、Type-C接口等。仅需将其与电脑连接，即可解决科技生活中遇到的种种痛点。
+            </p>
+            <p><img src="../img/use1.jpg" alt=""></p>
+            <p class="title">结构设计</p>
+            <p>极致一体化，机身表面没有一丝接缝和一颗螺丝。采用突破性的液态金属质感工艺，无任何键位开关，所有功能同时自然高效运行。</p>
+            <p class="title">无线网络</p>
+            <p>台式机或无自带网卡的电脑只需插入半果控制中心，切换至网卡模式即可接受WiFi信号。还可创建WiFi热点，让你的手机和平板立刻联网。</p>
+            <p><img src="../img/use.jpg" alt=""></p>
+            <p class="title">蓝牙连接</p>
+            <p>先进的超低功耗蓝牙4.1，设备配对连接更便捷。可将所有设备连接至一台控制中心，数据传输速率大幅提高。</p>
+            <p class="title">独立声卡</p>
+            <p>配备德州仪器HiFi芯片，内置Max Bass技术，带来更高解析力音质。并且采用独立耳机放大器，内置麦克风，任何软件都可轻松调用。</p>
+            <p class="title">极速充电</p>
+            <p>支持QC 2.0快充协议，使用一根Type-C线，4个USB可同时极速快充，并且每个接口都拥有芯片级的4重保护，告别插线板和充电器。</p>
+            <h3>活动介绍</h3>
+            <p class="title">试用报告要求100% 原创，抄袭会被封杀哦！</p>
+            <p class="title02">活动流程</p>
+            <ol>
+                <li>1.<strong>名单公布</strong>：试用名单将在活动页公布</li>
+                <li>2.<strong>试用通知</strong>：名单公布后客服将以短信的方式通知申请成功者，2天不回复算弃权</li>
+                <li>3.<strong>押金收取</strong>：客服将统一通知大家收取产品押金</li>
+                <li>4.<strong>产品寄送</strong>：收到押金后第一时间将产品快递给大家</li>
+                <li>5.<strong>网络晒单</strong>：收货后请在微博或朋友圈等社交网络晒单</li>
+                <li>6.<strong>试用报告</strong>：收到货的10天内完成报告并上传</li>
+                <li>7.<strong>产品回收</strong>：选取6篇优秀报告，赠送产品</li>
+                <li>8.<strong>押金退回</strong>：活动结束返还，人为损坏须赔偿</li>
+            </ol>
+            <p class="title02"> 活动时间</p>
+            <ol>
+                <li>1.<strong>申请报名</strong>：2016/02/02－2016/02/17（截至24点）</li>
+                <li>2.<strong>公布名单</strong>：2016/02/20</li>
+                <li>3.<strong>发货日期</strong>：2016/02/22（以实际为准）</li>
+                <li>4.<strong>试用期限</strong>：收到产品后10天内</li>
+
+            </ol>
+        </div>
+        <!-- 内容右边 -->
+        <div class="cright">
+            <h3>购买渠道</h3>
+            <p>￥ 499</p>
+            <a href="#">点击购买</a>
+            <p>来自官网</p>
+            <h3>极果体验师</h3>
+            <p><img src="../img/tiyanImg.jpg" alt=""></p>
+            <p class="item01">福利</p>
+            <p class="item02">第一时间体验新品，大众试用优先通过，还有定向邀请试用，新品玩到手软！</p>
+            <p class="item01">要求</p>
+            <p class="item02">是某个领域的大神级玩家，在社交网络或圈子里有大影响力，善写作会拍摄。</p>
+            <p class="item01">申请</p>
+            <p class="item02">1. 关注极果公众号：jguojguo <br>（或扫描下方二维码）<br>2. 在公众号内回复：体验师</p>
+            <h3>关注我们</h3>
+            <p><img src="../img/myCode.jpg" alt=""></p>
+        </div>
+    </div>
+    <!-- 热门试用 -->
+    <div class="hotuse">
+        <div class="sslide">
+            <a href="#">
+                <span>首发</span>
+                <img src="../img/hot1.jpg" class="hot">
+
+            </a>
+            <div>
+                <h2>巴慕达 The Toaster 烤面包机</h2>
+                <p><span>2032</span><span>20台</span></p>
+                <p><span>1392</span><span>申请</span></p>
+                <p>剩余时间2天</p>
+            </div>
+        </div>
+
+        <div class="sslide">
+            <a href="#">
+                <span>首发</span>
+                <img src="../img/hot2.jpg" class="hot">
+
+            </a>
+            <div>
+                <h2>巴慕达 The Toaster 烤面包机</h2>
+                <p><span>2032</span><span>20台</span></p>
+                <p><span>1392</span><span>申请</span></p>
+                <p>剩余时间2天</p>
+            </div>
+        </div>
+
+        <div class="sslide">
+            <a href="#">
+                <span>首发</span>
+                <img src="../img/hot3.jpg" class="hot">
+
+            </a>
+            <div>
+                <h2>巴慕达 The Toaster 烤面包机</h2>
+                <p><span>2032</span><span>20台</span></p>
+                <p><span>1392</span><span>申请</span></p>
+                <p>剩余时间2天</p>
+            </div>
+        </div>
+
+        <div class="sslide">
+            <a href="#">
+                <span>首发</span>
+                <img src="../img/hot4.jpg" class="hot">
+
+            </a>
+            <div>
+                <h2>巴慕达 The Toaster 烤面包机</h2>
+                <p><span>2032</span><span>20台</span></p>
+                <p><span>1392</span><span>申请</span></p>
+                <p>剩余时间2天</p>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <iframe src="../public_/footer.html" frameborder="0" scrolling="no"
+        style="width: 100%; height:380px; display: block;"></iframe>
+</body>
+
+</html>
+<script src="../js/vue.js"></script>
+<script src="../js/index.js"></script>
